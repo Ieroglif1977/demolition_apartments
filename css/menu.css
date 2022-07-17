@@ -1,0 +1,26 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+.title h3{
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-sherif;
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: white;
+}
+.menu{
+  margin: 4vh 50px;
+  position: fixed;
+  background: rgba(20, 20, 20, 0.6);
+}
+.list_menu a{
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-sherif;
+  font-size: 25px italic;
+  color: orange;
+}
+.list_menu li{
+margin: 20px 0;
+}
