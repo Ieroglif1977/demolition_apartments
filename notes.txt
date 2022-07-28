@@ -1,0 +1,6 @@
+#html
+
+
+#css
+fon.css > body.css && rm fon.css
+body.css загружать из 'body'
