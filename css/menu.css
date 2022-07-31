@@ -6,15 +6,15 @@
   border-radius: 30px;
 }
 #current_page_name {
-  font-size: 28px;
+  font-size: 16px;
   color: silver;
 }
 .menu a{
-  font-size: 25px;
+  font-size: 16px;
   color: orange;
 }
 li{
-  margin: 6px;
-  padding: 6px;
-  font-size: 25px;
+  margin: 2px;
+  padding: 2px;
+  /* font-size: 16px; */
 }
