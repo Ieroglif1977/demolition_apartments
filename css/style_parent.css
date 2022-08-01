@@ -1,0 +1,17 @@
+body {
+  background: url("../img/fon_wall.jpg");
+  position: relative;
+}
+h1 {
+  color: white;
+}
+h2 {
+  color: #cfc1ec;
+}
+.content {
+  margin:1%;
+  padding-left: 22%;
+}
+img {
+  border: 4px solid black;
+}
