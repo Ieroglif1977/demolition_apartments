@@ -7,14 +7,16 @@
 }
 #current_page_name {
   font-size: 16px;
+  font-style: oblique;
   color: silver;
 }
 .menu a{
-  font-size: 16px;
   color: orange;
 }
-li{
+.menu li{
   margin: 2px;
   padding: 2px;
-  /* font-size: 16px; */
+  font-size: 16px;
+  font-style: oblique;
+  color: silver;
 }
