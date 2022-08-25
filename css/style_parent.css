@@ -1,6 +1,6 @@
 body {
-  background: url("../img/fon_wall.jpg");
-  position: relative;
+  background: gray url("../img/fon_wall.jpg") no-repeat;
+  background-size: 100%;
 }
 h1 {
   color: white;

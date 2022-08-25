@@ -16,7 +16,7 @@ new window.JustValidate('.form', {
       }
     }
   },
-  colorWrong: '#ff0f0f',
+  colorWrong: 'red',
   messages: {
     name: {
       required: 'Введите имя',
@@ -24,11 +24,11 @@ new window.JustValidate('.form', {
       maxLength: 'Запрещено вводить более 15 символов'
     },
     email: {
-      email: 'Введите корректный email',
-      required: 'Введите email'
+      email: 'Email (для связи)',
+      required: 'Нужен корректный email (для связи)'
     },
     tel: {
-      required: 'Введите телефон',
+      required: 'Номер телефона',
       function: 'Здесь должно быть 10 символов без +7'
     }
   },

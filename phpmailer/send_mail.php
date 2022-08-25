@@ -24,47 +24,49 @@ foreach ( $_POST as $key => $value ) {
 $body = "<table style='width: 100%;'>$body</table>";
 
 // Настройки PHPMailer
-$mail = new PHPMailer\PHPMailer\PHPMailer();
+$mail = new PHPMailer\PHPMailer\PHPMailer(true);
+$mail->SMTPDebug = 3;
 
-try {
-  $mail->isSMTP();
-  $mail->CharSet = "UTF-8";
-  $mail->SMTPAuth   = true;
+$mail->isSMTP();
+$mail->CharSet = "UTF-8";
+$mail->SMTPAuth   = true;
 
-  // Настройки вашей почты
-  $mail->Host       = 'smtp.gmail.com'; // SMTP-сервер вашей почты
-  $mail->Username   = 'maugli10121977@gmail.com'; // Логин на почте
-  $mail->Password   = 'qmqzhykyvcekrmie'; // Пароль (токен) для почты
-  $mail->SMTPSecure = 'ssl';
-  $mail->Port       = 465;
+// Настройки вашей почты
+$mail->Host       = 'smtp.gmail.com'; // SMTP-сервер вашей почты
+$mail->Username   = 'maugli10121977@gmail.com'; // Логин на почте
+$mail->Password   = 'qmqzhykyvcekrmie'; // Пароль (токен) для почты
+$mail->SMTPSecure = 'ssl';
+$mail->Port       = 465;
 
-  $mail->setFrom('maugli10121977@gmail.com', 'Заявка с сайта'); // Адрес и имя отправителя
+$mail->setFrom('maugli10121977@gmail.com', 'Заявка с сайта'); // Адрес и имя отправителя
 
-  // Получатель письма
-  $mail->addAddress('maugli10121977@gmail.com'); // самому себе
-  
-  // Прикрепление файлов к письму
-  if (!empty($file['name'][0])) {
-    for ($ct = 0; $ct < count($file['tmp_name']); $ct++) {
-      $uploadfile = tempnam(sys_get_temp_dir(), sha1($file['name'][$ct]));
-      $filename = $file['name'][$ct];
-      if (move_uploaded_file($file['tmp_name'][$ct], $uploadfile)) {
-        $mail->addAttachment($uploadfile, $filename);
-        $rfile[] = "Файл $filename прикреплён";
-      } else {
-          $rfile[] = "Не удалось прикрепить файл $filename";
-      }
+// Получатель письма
+$mail->addAddress('maugli10121977@gmail.com'); // самому себе
+
+
+// Прикрепление файлов к письму
+if (!empty($file['name'][0])) {
+  for ($ct = 0; $ct < count($file['tmp_name']); $ct++) {
+    $uploadfile = tempnam(sys_get_temp_dir(), sha1($file['name'][$ct]));
+    $filename = $file['name'][$ct];
+    if (move_uploaded_file($file['tmp_name'][$ct], $uploadfile)) {
+      $mail->addAttachment($uploadfile, $filename);
+      $rfile[] = "Файл $filename прикреплён";
+    } else {
+        $rfile[] = "Не удалось прикрепить файл $filename";
     }
   }
+}
 
 // Отправка сообщения
 $mail->isHTML(true);
 $mail->Subject = $title;
 $mail->Body = $body;
 
-$mail->send();
-
+try {
+  $mail->send();
+  echo "Сообщение было успешно отправлено";
 } catch (Exception $e) {
-  $status = "Сообщенние не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
+  echo "Сообщенние не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
 }
 ?>
