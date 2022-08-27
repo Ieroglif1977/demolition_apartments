@@ -1,0 +1,39 @@
+#problems_1 {
+  position: relative;
+  /*width: 90%;*/
+  margin-left: 12%;
+}
+#problem_1 > #problem_1 {
+  position: relative;
+  width: 50%;
+  display: inline-block;
+}
+#problems_1 .header_2 {
+  position: relative;
+  margin-top: 10px;
+  left: 2%;
+  width: 90%;
+}
+/*
+#problems_1 #problem_1_1 {
+  position: relative;
+  margin-left: 16%;
+  margin-right: 66%;
+  width: 360px;
+  height: 255px;
+}
+*/
+#problems_1 #problem_1_2 {
+  position: relative;
+  margin-left: 70%;
+  width: 360px;
+  height: 255px;
+}
+.problem_text {
+  position: relative;
+  margin-left: 0;
+  margin-right: 0;
+  width: 360px;
+  bottom: 1%;
+  color: #f3aaf6;
+}

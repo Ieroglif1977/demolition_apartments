@@ -6,19 +6,20 @@
   <link rel="icon" href="img/favicon.png">
   <link rel="stylesheet" type="text/css" href="css/menu.css">
   <link rel="stylesheet" type="text/css" href="css/style_children.css">
+  <link rel="stylesheet" type="text/css" href="css/services.css">
 </head>
 <body>
   <div class="menu">
     <div id="current_page_name">
       <a href="index.html"><h3>Главная</h3></a>
-    </div>
+    </div> <!-- id="current_page_name" -->
     <ul>
       <li><a href="about_us.html">О нас</a></li>
       <li>Услуги</li>
       <li><a href="prices.html">Цены</a></li>
       <li><a href="contacts.html">Контакты</a></li>
     </ul>
-  </div>
+  </div> <!-- class="menu" -->
   <div class="content">
     <h1 align="center">Как начать демонтаж</h1>
     <ol>
@@ -29,8 +30,19 @@
       <li>Подписываем акты выполненных работ и рассчитываемся.</li>
     </ol>
     <br>
-    <h2 align="center">Основные проблемы у 90% фирм выполняющих демонтаж</h2>
-    <p>Из-за низкой квалификации рабочих демонтируется то, что необходимо сохранить.<img align="left" src="img/services_1.jpg" alt="как нельзя делать демонтаж"></p>
-  </div>
+    <div id="problems_1">
+      <h2 align="center" class="header_2">Основные проблемы у 90% фирм выполняющих демонтаж</h2>
+      <div id="problem_1">
+        <div id="problem_1_1">
+          <img class="problem_img" src="img/services_problem_1.jpg" alt="как нельзя делать демонтаж">
+          <p class="problem_text">Из-за низкой квалификации рабочих демонтируется то, что необходимо сохранить.</p>
+        </div> <!-- id="problem_1_1" -->
+        <div id="problem_1_2">
+          <img class="problem_img" src="img/services_problem_2.jpg" alt="как нельзя делать демонтаж">
+          <p class="problem_text">Нерадивые демонтажники пробили трубу и затопили соседей</p>
+        </div> <!-- id="problem_1_2" -->
+      </div> <!-- id="problem_1" -->
+    </div> <!-- id="problems_1" -->
+  </div> <!-- class="content" -->
 </body>
 </html>

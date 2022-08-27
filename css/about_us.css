@@ -5,22 +5,14 @@ body {
 }
 .content {
   position: relative;
-  left: 14%;
-  width: 86%;
+  left: 18%;
+  width: 82%;
 }
 body h1 {
   color: lightyellow;
 }
-body h2 {
-  color: #cecccc;
-}
 p, li {
   margin-top: 1%;
-  /*
-  margin-left: 16%;
-  margin-right: 4%;
-  padding-left: 2%;
-  */
   padding-right: 2%;
   color: cyan;
   font-size: 16px;
@@ -29,11 +21,11 @@ p, li {
   font-style: oblique;
 }
 .content #img_1,#img_3 {
-  margin: 1%;
+  margin-left: 2%;
   border: 4px solid black;
 }
 .content #img_2 {
-  margin-left: 18%;
+  margin-left: 0;
   margin-right: 2%;
   border: 4px solid black;
 }

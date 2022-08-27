@@ -1,9 +1,10 @@
 body {
   background: gray url("../img/fon_wall.jpg") no-repeat;
-  background-size: 100%;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
 h1 {
-  color: white;
+  color: lightyellow;
 }
 h2 {
   color: #cfc1ec;
