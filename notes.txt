@@ -1,5 +1,5 @@
 #html
-Для отправки сообщения на эл почту
+Для отправки сообщения на email
 <form action="mailto:vlad@webref.ru" enctype="text/plain">
 
 #css
